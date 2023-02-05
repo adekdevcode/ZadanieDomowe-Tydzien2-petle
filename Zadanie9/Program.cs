@@ -1,21 +1,22 @@
 ﻿//9.Napisz program, który zamieni liczbę dziesiętną na liczbę binarną.
 
-int n = 20;
+int decimalNumber = 20;
 
-string binary = "";
+string binaryReverse = "";
+string binaryResult = "";
 
-while(n > 0)
+while (decimalNumber > 0)
 {
-    if (n % 2 == 0)
-    {
-        binary += "0";
-    }
-    else
-    {
-        binary += "1";
-    }
-
-    n /= 2;
+    binaryReverse += decimalNumber % 2;
+    decimalNumber /= 2;
 }
 
-Console.WriteLine(binary);
+int binaryLength = binaryReverse.Length - 1;
+
+while (binaryLength >= 0)
+{
+    binaryResult += binaryReverse[binaryLength];
+    binaryLength--;
+}
+
+Console.WriteLine(binaryResult);

@@ -4,19 +4,22 @@
 //    4 5 6
 //    7 8 9 10
 
-int n = 16;
+Console.WriteLine("Podaj liczbę ");
 
-int zmienna = 1;
+int n = int.Parse(Console.ReadLine());
+
+int num = 1;
+Console.WriteLine();
 
 for (int i = 1; i < n / 2; i++)
 {
     for (int j = 0; j < i; j++)
     {
-        if (zmienna > n)
+        if (num > n)
             break;
 
-        Console.Write(" " + zmienna);
-        zmienna++;
+        Console.Write(" " + num);
+        num++;
     }
     Console.WriteLine();
 }
